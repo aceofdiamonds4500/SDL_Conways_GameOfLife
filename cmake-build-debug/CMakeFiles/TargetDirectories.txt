@@ -1,0 +1,8 @@
+/home/nick/CLionProjects/SDLproject/cmake-build-debug/CMakeFiles/SDLGame.dir
+/home/nick/CLionProjects/SDLproject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nick/CLionProjects/SDLproject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/nick/CLionProjects/SDLproject/cmake-build-debug/vendored/SDL/CMakeFiles/SDL3-shared.dir
+/home/nick/CLionProjects/SDLproject/cmake-build-debug/vendored/SDL/CMakeFiles/SDL3_test.dir
+/home/nick/CLionProjects/SDLproject/cmake-build-debug/vendored/SDL/CMakeFiles/SDL_uclibc.dir
+/home/nick/CLionProjects/SDLproject/cmake-build-debug/vendored/SDL/CMakeFiles/edit_cache.dir
+/home/nick/CLionProjects/SDLproject/cmake-build-debug/vendored/SDL/CMakeFiles/rebuild_cache.dir

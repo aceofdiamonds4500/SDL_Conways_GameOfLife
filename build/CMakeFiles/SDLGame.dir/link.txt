@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/SDLGame.dir/link.d CMakeFiles/SDLGame.dir/main.c.o -o SDLGame  -Wl,-rpath,/home/nick/CLionProjects/SDLproject/build libSDL3.so.0.3.0 -lm

@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/nick/CLionProjects/SDLproject/build/cmake_install.cmake",
+		"/home/nick/CLionProjects/SDLproject/build/vendored/SDL/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

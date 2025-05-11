@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/hello.dir/link.d CMakeFiles/hello.dir/main.c.o -o hello  -Wl,-rpath,/home/nick/CLionProjects/SDLproject/build libSDL3.so.0.3.0

@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/SDLproject.dir/link.d CMakeFiles/SDLproject.dir/main.c.o -o SDLproject
