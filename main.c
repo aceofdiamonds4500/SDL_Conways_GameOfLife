@@ -60,7 +60,7 @@ int checkNeighbors(int cellX, int cellY) {
 }
 
 void gameUpdate(void) {
-    /*displays the first generation
+    /*displays the first generation in console
      for (int i = 0; i < ARR_HEIGHT; i++) {
          for (int j = 0; j < ARR_WIDTH; j++) {
              printf("%d ", gameArray[j][i]);
@@ -93,7 +93,7 @@ void gameUpdate(void) {
         }
     }
 
-    /* display nextGen */
+    /* display nextGen in console */
     /*for (int i = 0; i < ARR_HEIGHT; i++) {
         for (int j = 0; j < ARR_WIDTH; j++) {
             printf("%d ", nextGen[j][i]);
@@ -119,7 +119,6 @@ void gameDelay(int gameDelay) {
     SDL_Delay(gameDelay * 25);
 }
 
-/* This function runs once at startup. */
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[])
 {
     initCellArray(&cells);
@@ -139,7 +138,6 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[])
     return SDL_APP_CONTINUE;  /* carry on with the program! */
 }
 
-/* This function runs when a new event (mouse input, keypresses, etc) occurs. */
 SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event)
 {
 
@@ -205,31 +203,29 @@ SDL_AppResult SDL_AppIterate(void *appstate)
         gameUpdate();
     }
     Uint32 endTime = SDL_GetTicks();
-
-    // Calculate elapsed time
     Uint32 elapsedTime = endTime - startTime;
 
-    // Convert milliseconds to seconds
+    // milliseconds to seconds
     float secondsElapsed = (float)elapsedTime / 1000.0f;
 
-    printf("%f seconds\n", secondsElapsed);
-    SDL_SetRenderDrawColorFloat(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE_FLOAT);  /* new color, full alpha. */
+    // uncomment to track speed of generation
+    // printf("%f seconds\n", secondsElapsed);
+    SDL_SetRenderDrawColorFloat(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE_FLOAT);  /* background */
 
     /* clear the window to the draw color. */
     SDL_RenderClear(renderer);
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); /* cell color */
     for (size_t i = 0; i < cells.size; ++i) {
         SDL_RenderFillRect(renderer, &cells.data[i].square);
     }
-    /* put the newly-cleared rendering on the screen. */
+
+    /* color to screen */
     SDL_RenderPresent(renderer);
 
-    return SDL_APP_CONTINUE;  /* carry on with the program! */
+    return SDL_APP_CONTINUE;  /* carry on with the program */
 }
 
-/* This function runs once at shutdown. */
 void SDL_AppQuit(void *appstate, SDL_AppResult result)
 {
-    /* SDL will clean up the window/renderer for us. */
     freeCellArray(&cells);
 }
